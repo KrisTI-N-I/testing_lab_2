@@ -21,7 +21,7 @@ TEST(save_test, usual)
     ASSERT_EQ(result, true);
 
     QString line_file;
-    auto line_text = txt->myList->begin();
+    std::list<std::string>::iterator line_text = txt->myList->begin();
 
     while (!file.atEnd()) {
         line_file = file.readLine();
@@ -48,7 +48,7 @@ TEST(save_test, empty_strings)
     ASSERT_EQ(result, true);
 
     QString line_file;
-    auto line_text = txt->myList->begin();
+    std::list<std::string>::iterator line_text = txt->myList->begin();
 
     while (!file.atEnd()) {
         line_file = file.readLine();
@@ -75,7 +75,7 @@ TEST(save_test, no_empty_strings)
     ASSERT_EQ(result, true);
 
     QString line_file;
-    auto line_text = txt->myList->begin();
+    std::list<std::string>::iterator line_text = txt->myList->begin();
 
     while (!file.atEnd()) {
         line_file = file.readLine();
@@ -99,7 +99,7 @@ TEST(save_test, one_string)
     ASSERT_EQ(result, true);
 
     QString line_file;
-    auto line_text = txt->myList->begin();
+    std::list<std::string>::iterator line_text = txt->myList->begin();
 
     while (!file.atEnd()) {
         line_file = file.readLine();
@@ -122,7 +122,7 @@ TEST(save_test, nothing)
     ASSERT_EQ(result, true);
 
     QString line_file;
-    auto line_text = txt->myList->begin();
+    std::list<std::string>::iterator line_text = txt->myList->begin();
 
     while (!file.atEnd()) {
         line_file = file.readLine();
