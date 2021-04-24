@@ -3,9 +3,6 @@ CONFIG += c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-
-QMAKE_CFLAGS += -Wall -Wextra -Werror
-
 SOURCES += \
     append_line.cpp \
     create_text.cpp \
