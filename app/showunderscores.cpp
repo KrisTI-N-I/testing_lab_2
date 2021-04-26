@@ -22,20 +22,17 @@ static void show_line(int index, std::string contents, int cursor, void *data)
     UNUSED(cursor);
     UNUSED(data);
 
-    /*Выделяем память под копию текущей строки */
-    char *contents_copy = (char *) malloc((MAXLINE + 1) * sizeof(char));
-
-    /*Копируем текующую строку */
-    strcpy(contents_copy, contents.c_str());
-
     int i=0;
-    while (contents_copy[i]!='\0') {
+    while (contents[i]!='\0') {
 
-	if (contents_copy[i]==' ')
-        contents_copy[i]='_';
+        if (contents[i]==' ') {
+            printf("_");
+        } else {
+            printf("%c", contents[i]);
+        }
         i++;
     }
 
     /* Выводим копию строки на экран */
-    printf("%s\n", contents_copy);
+    printf("\n");
 }
